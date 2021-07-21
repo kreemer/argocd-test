@@ -6,6 +6,7 @@ metadata:
     nginx.ingress.kubernetes.io/rewrite-target: /$1
   name: whoami-i
 spec:
+  ingressClassName: public
   rules:
   - host: whoami.ublab.unibe.ch 
     http:
