@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: whoami-i
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: whoami-i
+  template:
+    metadata:
+      labels:
+        app: whoami-i
+    spec:
+      containers:
+      - name: whoami
+        image: jwilder/whoami
+        ports:
+        - containerPort: 8000
